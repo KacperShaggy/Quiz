@@ -1,11 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Quiz.MainPage">
+             x:Class="Quiz.MainPage"
+             BackgroundImageSource="gierek.jpg">
 
-    <ScrollView>
-        <Label></Label>
-        <Label Text="User 1: " FontSize="24" FontAttributes="Bold" FontFamily="Poppins-regular" ></Label>
-    </ScrollView>
+    <StackLayout>
+        <Label Text="Quiz wiedzy o polskiej polityce" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" FontFamily="Poppins-regular" Margin="20"></Label>
+        <Border Stroke="#222" StrokeThickness="3" StrokeShape="RoundRectangle 15" Padding="15" Margin="40">
+            <StackLayout Margin="40"
+                         HorizontalOptions="Center"
+                         WidthRequest="300"
+                         HeightRequest="200"
+                         VerticalOptions="Center">
+                <Label Text="Gracz 1: " FontSize="24" FontAttributes="Bold" FontFamily="Poppins-regular" VerticalOptions="Center" ></Label>
+                <Entry x:Name="user1_name" Placeholder="Nazwa gracza" Margin="0, 0, 40, 0"  VerticalOptions="Center"></Entry>
+                <Label Text="Gracz 2: " FontSize="24" FontAttributes="Bold" FontFamily="Poppins-regular"   VerticalOptions="Center"></Label>
+                <Entry x:Name="user2_name" Placeholder="Nazwa gracza"  VerticalOptions="Center"></Entry>
+            </StackLayout>
+        </Border>
+        <Button Text="Kochani! Zaczynamy.." BackgroundColor="White" TextColor="Black" FontFamily="Poppins-regular" Margin="40"></Button>
+    </StackLayout>
 
 </ContentPage>
