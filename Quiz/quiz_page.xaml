@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.quiz_page"
+             Title="Pytanie" BackgroundImageSource="gierek.jpg">
+          
+    <VerticalStackLayout>
+        <Label 
+            Text=""
+            x:Name="question"
+           />
+        <Button Text="ans1" Clicked="AnswerA" x:Name="ansA"></Button>
+        <Button Text="ans2" Clicked="AnswerB" x:Name="ansB"></Button>
+        <Button Text="ans3" Clicked="AnswerC" x:Name="ansC"></Button>
+        <Button Text="ans4" Clicked="AnswerD" x:Name="ansD"></Button> 
+    </VerticalStackLayout>
+</ContentPage>

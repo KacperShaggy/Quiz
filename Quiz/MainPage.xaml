@@ -18,7 +18,7 @@
                 <Entry x:Name="user2_name" Placeholder="Nazwa gracza"  VerticalOptions="Center"></Entry>
             </StackLayout>
         </Border>
-        <Button Text="Kochani! Zaczynamy.." BackgroundColor="White" TextColor="Black" FontFamily="Poppins-regular" Margin="40"></Button>
+        <Button Text="Kochani! Zaczynamy.." BackgroundColor="White" TextColor="Black" FontFamily="Poppins-regular" Margin="40" Clicked="Start_quiz"></Button>
     </StackLayout>
 
 </ContentPage>

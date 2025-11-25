@@ -12,7 +12,6 @@
         <Setter Property="IndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"/>
         <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}"/>
     </Style>
-
     <Style TargetType="Border">
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
@@ -25,10 +24,12 @@
 
     <Style TargetType="Button">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource PrimaryDarkText}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="BorderWidth" Value="3"/>
+        <Setter Property="BorderColor" Value="Black"></Setter>
+        <Setter Property="Margin" Value="40"/>
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="Padding" Value="14,10"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
