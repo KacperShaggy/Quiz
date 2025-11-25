@@ -9,17 +9,21 @@ public partial class quiz_page : ContentPage
 
     private void AnswerA(object sender, EventArgs e)
     {
-
+        checkAnswer(1);
     }
     private void AnswerB(object sender, EventArgs e)
     {
-
+        checkAnswer(2);
     }
     private void AnswerC(object sender, EventArgs e)
     {
-
+        checkAnswer(3);
     }
     private void AnswerD(object sender, EventArgs e)
+    {
+        checkAnswer(4);
+    }
+    void checkAnswer(int x)
     {
 
     }
