@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quiz.leaderboard"
              Title="leaderboard">
-    <VerticalStackLayout>
+    <VerticalStackLayout >
         <Label 
-            Text="Wyniki"
+            Text="Wynik"
+            x:Name="results"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Grid>
+        <Grid Loaded="Grid_Loaded">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -17,10 +18,11 @@
                 <ColumnDefinition Width="3*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label x:Name="user1" Text="gracz1" Grid.Column="0" Grid.Row="0"></Label>
+            <Label x:Name="nickname1" Text="gracz1" Grid.Column="0" Grid.Row="0"></Label>
             <Label x:Name="point1" Text="1" Grid.Column="1" Grid.Row="0"></Label>
-            <Label x:Name="user2" Text="gracz2" Grid.Column="0" Grid.Row="1"></Label>
+            <Label x:Name="nickname2" Text="gracz2" Grid.Column="0" Grid.Row="1"></Label>
             <Label x:Name="point2" Text="3" Grid.Column="1" Grid.Row="1"></Label>
         </Grid>
+        <Button Text="Następna runda" Clicked="Next_Round"></Button>
     </VerticalStackLayout>
 </ContentPage>

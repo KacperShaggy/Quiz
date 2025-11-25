@@ -1,12 +1,27 @@
+using Newtonsoft.Json;
 using Quiz;
 namespace Quiz;
 
-public partial class quiz_page : ContentPage
+public partial class quiz_page : ContentPage, IQueryAttributable
 {
-	public quiz_page()
-	{
-		InitializeComponent();
-	}
+    private Game currentGame;
+
+    public quiz_page()
+    {
+        InitializeComponent();
+    }
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        if (query.TryGetValue("gameData", out var data))
+        {
+            string encoded = data.ToString();
+            string json = Uri.UnescapeDataString(encoded);
+
+            currentGame = JsonConvert.DeserializeObject<Game>(json);
+
+        }
+    }
 
     private void AnswerA(object sender, EventArgs e)
     {
@@ -26,6 +41,16 @@ public partial class quiz_page : ContentPage
     }
     async private void checkAnswer(int x)
     {
-        await Shell.Current.GoToAsync("//leaderboard");
+        int correctAnswer = 3;
+        if (correctAnswer==x && currentGame.RoundNumber%2==1)
+        {
+            currentGame.PointsUser1 += 1;
+        }
+        if (correctAnswer==x && currentGame.RoundNumber%2==0)
+        {
+            currentGame.PointsUser2 += 1;
+        }
+        string json = JsonConvert.SerializeObject(currentGame);
+        await Shell.Current.GoToAsync($"//leaderboard?gameData={Uri.EscapeDataString(json)}");
     }
 }
