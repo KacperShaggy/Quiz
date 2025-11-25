@@ -1,3 +1,4 @@
+using Quiz;
 namespace Quiz;
 
 public partial class quiz_page : ContentPage
@@ -23,8 +24,8 @@ public partial class quiz_page : ContentPage
     {
         checkAnswer(4);
     }
-    void checkAnswer(int x)
+    async private void checkAnswer(int x)
     {
-
+        await Shell.Current.GoToAsync("//leaderboard");
     }
 }

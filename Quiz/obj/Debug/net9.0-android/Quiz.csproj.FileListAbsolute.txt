@@ -986,3 +986,4 @@ C:\Users\Student\source\repos\Quiz\Quiz\obj\Debug\net9.0-android\stamp\_Generate
 C:\Users\Student\source\repos\Quiz\Quiz\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Student\source\repos\Quiz\Quiz\obj\Debug\net9.0-android\resizetizer\r\drawable\gierek.jpg
 C:\Users\Student\Source\Repos\Quiz\Quiz\obj\Debug\net9.0-android\android\src\microsoft\maui\R.java
+C:\Users\Student\Source\Repos\Quiz\Quiz\obj\Debug\net9.0-android\android\assets\x86_64\Newtonsoft.Json.dll

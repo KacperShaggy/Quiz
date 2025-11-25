@@ -14,5 +14,8 @@
     Title="Pytanie"
     ContentTemplate="{DataTemplate local:quiz_page}"
     Route="quiz_page" />
-
+    <ShellContent
+Title="Pytanie"
+ContentTemplate="{DataTemplate local:leaderboard}"
+Route="leaderboard" />
 </Shell>

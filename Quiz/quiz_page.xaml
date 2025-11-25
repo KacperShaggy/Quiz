@@ -7,8 +7,7 @@
     <VerticalStackLayout>
         <Label 
             Text=""
-            x:Name="question"
-           />
+            x:Name="question"/>
         <Button Text="ans1" Clicked="AnswerA" x:Name="ansA"></Button>
         <Button Text="ans2" Clicked="AnswerB" x:Name="ansB"></Button>
         <Button Text="ans3" Clicked="AnswerC" x:Name="ansC"></Button>
