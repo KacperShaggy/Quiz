@@ -3,14 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quiz.quiz_page"
              Title="Pytanie" BackgroundImageSource="gierek.jpg">
-          
-    <VerticalStackLayout>
+
+    <VerticalStackLayout 
+        Padding="20"
+        Spacing="15"
+        VerticalOptions="Center">
+
         <Label 
-            Text=""
-            x:Name="question"/>
-        <Button Text="ans1" Clicked="AnswerA" x:Name="ansA"></Button>
-        <Button Text="ans2" Clicked="AnswerB" x:Name="ansB"></Button>
-        <Button Text="ans3" Clicked="AnswerC" x:Name="ansC"></Button>
-        <Button Text="ans4" Clicked="AnswerD" x:Name="ansD"></Button> 
+            x:Name="currentPlayerLabel"
+            Text="Teraz odpowiada: "
+            BackgroundColor="White"
+            TextColor="Black"
+            FontSize="20"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"/>
+
+
+        <Label 
+            x:Name="question"
+            Text="Pytanie pojawi się tutaj"
+            FontSize="24"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            LineBreakMode="WordWrap"/>
+
+        <Button Text="Odpowiedź A" Clicked="AnswerA" x:Name="ansA" BackgroundColor="White" TextColor="Black" FontSize="18"/>
+        <Button Text="Odpowiedź B" Clicked="AnswerB" x:Name="ansB" BackgroundColor="White" TextColor="Black" FontSize="18"/>
+        <Button Text="Odpowiedź C" Clicked="AnswerC" x:Name="ansC" BackgroundColor="White" TextColor="Black" FontSize="18"/>
+        <Button Text="Odpowiedź D" Clicked="AnswerD" x:Name="ansD" BackgroundColor="White" TextColor="Black" FontSize="18"/>
+
     </VerticalStackLayout>
 </ContentPage>

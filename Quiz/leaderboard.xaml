@@ -2,27 +2,56 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quiz.leaderboard"
-             Title="leaderboard">
-    <VerticalStackLayout >
+             Title="Leaderboard"
+             BackgroundImageSource="gierek.jpg">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Wyniki / aktualna runda -->
         <Label 
-            Text="Wynik"
             x:Name="results"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid Loaded="Grid_Loaded">
+            Text="Wynik"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            TextColor="White"/>
+
+        <!-- Grid z wynikami graczy -->
+        <Grid Loaded="Grid_Loaded" RowSpacing="10" ColumnSpacing="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="nickname1" Text="gracz1" Grid.Column="0" Grid.Row="0"></Label>
-            <Label x:Name="point1" Text="1" Grid.Column="1" Grid.Row="0"></Label>
-            <Label x:Name="nickname2" Text="gracz2" Grid.Column="0" Grid.Row="1"></Label>
-            <Label x:Name="point2" Text="3" Grid.Column="1" Grid.Row="1"></Label>
+
+            <!-- Gracz 1 -->
+            <Border Grid.Row="0" Grid.Column="0" BackgroundColor="#33007ACC" StrokeShape="RoundRectangle 10" Padding="10">
+                <Label x:Name="nickname1" Text="gracz1" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" BackgroundColor="#33007ACC" StrokeShape="RoundRectangle 10" Padding="10">
+                <Label x:Name="point1" Text="1" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+            </Border>
+
+            <!-- Gracz 2 -->
+            <Border Grid.Row="1" Grid.Column="0" BackgroundColor="#33CC0000" StrokeShape="RoundRectangle 10" Padding="10">
+                <Label x:Name="nickname2" Text="gracz2" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" BackgroundColor="#33CC0000" StrokeShape="RoundRectangle 10" Padding="10">
+                <Label x:Name="point2" Text="3" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+            </Border>
         </Grid>
-        <Button Text="Następna runda" Clicked="Next_Round"></Button>
+
+        <!-- Przycisk następnej rundy -->
+        <Button Text="➡ Nowa gra"
+                TextColor="White"
+                BackgroundColor="Black"
+                CornerRadius="15"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                Clicked="Next_Round"/>
     </VerticalStackLayout>
 </ContentPage>

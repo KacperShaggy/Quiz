@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quiz
 {
-    internal class Game
+    public class Game
     {
         public string UserName1 { get; set; }
         public string UserName2 { get; set; }
